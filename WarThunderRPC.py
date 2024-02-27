@@ -50,7 +50,6 @@ while True:
     try:
         textMission=mission.text
         info = json.loads(textMission)
-        print (info["objectives"][0]['text'])
         mainObjective = info["objectives"][0]['text']
         inMatch = info["objectives"][0]['primary']
     except:

@@ -27,3 +27,9 @@ Your status might show up as "test drive" or that you are flying a "DUMMY_PLANE"
 ## Development
 
 I'm working on this myself, as an amateur in Python, please feel free to contribute and reach out to me if you have any suggestions, feedback or ideas!
+
+## Bugs
+
+ - Air vehicles selected in the hangar does not update RPC, updates when a ground vehicle is selected.
+ - RPC is shown as 'Test Drive' at the start of matches, this is due to the game logic's objective flag not being set until the start of the match.
+ - Current vehicle is shown as "DUMMY_PLANE" at the start of matches, this is the default camera view name.

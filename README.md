@@ -4,7 +4,7 @@
 
 **This is a external application which adds War Thunder as a Discord Rich Presence application. \[1].**
 
-\[1] This application **pulls in-game information from War Thunder itself through Port 8111**.
+\[1] This application **pulls in-game information from War Thunder through Port 8111**.
 War Thunder outputs some in-game data to 127.0.0.1:8111 and it's subfolders automatically on all machines. There really isn't much to go off and it's pretty awfully structured, but it makes do for now.
 This application modifies in no way whatsoever any data from the game, it is completely safe and will not get you banned.
 

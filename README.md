@@ -38,3 +38,4 @@ I'm working on this myself, as an amateur in Python, please feel free to contrib
  - Air vehicles selected in the hangar does not update RPC, updates when a ground vehicle is selected.
  - RPC is shown as 'Test Drive' at the start of matches, this is due to the game logic's objective flag not being set until the start of the match.
  - Current vehicle is shown as "DUMMY_PLANE" at the start of matches, this is the default camera view name.
+ - Air "Operation" Mode is broken, and will show up as a 'Test Drive', this is due to the game's logic not outputting correct information.

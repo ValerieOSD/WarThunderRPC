@@ -15,6 +15,7 @@ This application modifies in no way whatsoever any data from the game, it is com
 ### Features
 
   - Shows if you are in the hangar, in a match, or in a test drive.
+  - Shows what map you are in.
   - Detects what vehicle you are using.
   - Displays simple match statistics (Air or Ground, Domination or Conquest, etc).
 

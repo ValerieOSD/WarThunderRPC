@@ -1,1 +1,1 @@
-# War-Thunder-Discord-Rich-Presence
+# War Thunder Discord Rich Presence

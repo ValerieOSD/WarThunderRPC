@@ -29,6 +29,13 @@ Naval vehicles show no data and will not work, it will show up as "Unknown vehic
 
 Your status might show up as "test drive" or that you are flying a "DUMMY_PLANE" during the first few seconds of a match, this is as far as I know unavoidable for now, but it should fix itself once you load in. :)
 
+## How to Install
+
+ 1. Go to "Releases" tab and download the latest version's .ZIP file
+ 2. Unzip the file
+ 3. Run the application whilst War Thunder is open
+
+
 ## Development
 
 I'm working on this myself, as an amateur in Python, please feel free to contribute and reach out to me if you have any suggestions, feedback or ideas!

@@ -10,7 +10,7 @@ from pprint import pprint
 
 
 clockTimer = int(time.time())
-client_id = "1211769535468937237"  # Replace this with your own client id
+client_id = "1211769535468937237"
 RPC = Presence(client_id)  # Initialize the client class
 RPC.connect() # Start the handshake loop
 
@@ -82,6 +82,8 @@ while True:
 
     if isinVehicle is True and inMap is False:
         RPC.update(state="In the hangar", details="Browsing vehicles..", start=clockTimer, large_image="logo")  # Set the presence
+    elif isinVehicle is False and inMap is False:
+        RPC.update(state="In the hangar", details="Browsing vehicles..", start=clockTimer, large_image="logo")  # Set the presence
 
     # --- AIR --- #
     elif isinVehicle is True and inMap is True and inMatch is True and vehicleType=="air":
@@ -99,14 +101,18 @@ while True:
             RPC.update(state="Piloting a "+truncatedVehicleName.upper(), details="Ground Conquest Match", start=clockTimer, large_image="logo", large_text="War Thunder", small_image="https://encyclopedia.warthunder.com/i/images/"+strippedVehicleName+".png",small_text=truncatedVehicleName.upper())
         elif mainObjective.startswith("Capture and hold the airfield"):
             RPC.update(state="Piloting a "+truncatedVehicleName.upper(), details="Air Domination Match on "+currentMap, start=clockTimer, large_image="logo", large_text="War Thunder", small_image="https://encyclopedia.warthunder.com/i/images/"+strippedVehicleName+".png",small_text=truncatedVehicleName.upper())
+        elif mainObjective.startswith("Capture and maintain superiority over the air zone"):
+            RPC.update(state="Piloting a "+truncatedVehicleName.upper(), details="Air Domination Match on "+currentMap, start=clockTimer, large_image="logo", large_text="War Thunder", small_image="https://encyclopedia.warthunder.com/i/images/"+strippedVehicleName+".png",small_text=truncatedVehicleName.upper())
         elif mainObjective.startswith("Destroy the enemy ground vehicles"):
             RPC.update(state="Piloting a "+truncatedVehicleName.upper(), details="Air Ground Strike Match on "+currentMap, start=clockTimer, large_image="logo", large_text="War Thunder", small_image="https://encyclopedia.warthunder.com/i/images/"+strippedVehicleName+".png",small_text=truncatedVehicleName.upper())
         elif mainObjective.startswith("Destroy the highlighted targets"):
             RPC.update(state="Piloting a "+truncatedVehicleName.upper(), details="Air Frontline Match on "+currentMap, start=clockTimer, large_image="logo", large_text="War Thunder", small_image="https://encyclopedia.warthunder.com/i/images/"+strippedVehicleName+".png",small_text=truncatedVehicleName.upper())
+        elif mainObjective.__str__("null"):
+            RPC.update(state="Piloting a "+truncatedVehicleName.upper(), details="Air Operations Match on "+currentMap, start=clockTimer, large_image="logo", large_text="War Thunder", small_image="https://encyclopedia.warthunder.com/i/images/"+strippedVehicleName+".png",small_text=truncatedVehicleName.upper())
         elif currentMap=="UNKNOWN":
-            RPC.update(state="Piloting a "+truncatedVehicleName.upper(), details="Air Match", start=clockTimer, large_image="logo", large_text="War Thunder", small_image="https://encyclopedia.warthunder.com/i/images/"+strippedVehicleName+".png",small_text=truncatedVehicleName.upper())
+            RPC.update(state="Piloting a "+truncatedVehicleName.upper(), details="Air Match on "+currentMap, start=clockTimer, large_image="logo", large_text="War Thunder", small_image="https://encyclopedia.warthunder.com/i/images/"+strippedVehicleName+".png",small_text=truncatedVehicleName.upper())
         else:
-            RPC.update(state="Piloting a "+truncatedVehicleName.upper(), details="Air Match", start=clockTimer, large_image="logo", large_text="War Thunder", small_image="https://encyclopedia.warthunder.com/i/images/"+strippedVehicleName+".png",small_text=truncatedVehicleName.upper())    
+            RPC.update(state="Piloting a "+truncatedVehicleName.upper(), details="Air Match on "+currentMap, start=clockTimer, large_image="logo", large_text="War Thunder", small_image="https://encyclopedia.warthunder.com/i/images/"+strippedVehicleName+".png",small_text=truncatedVehicleName.upper())    
 
     # --- TANKS --- #
     elif isinVehicle is True and vehicleType=="tank" and inMap is True and inMatch is True:
@@ -125,6 +131,7 @@ while True:
     elif isinVehicle is False and inMap is True:
         RPC.update(state="Unknown vehicle", details="In-game", start=clockTimer, large_image="logo", large_text="War Thunder")
 
+
     # --- TEST DRIVE --- #
     elif isinVehicle is True and inMap is True and inMatch is False and vehicleType=="tank" or inMatch is False:
         RPC.update(state="Driving a "+truncatedVehicleName.upper(), details="In Test Drive", start=clockTimer, large_image="logo", large_text="War Thunder", small_image="https://encyclopedia.warthunder.com/i/images/"+strippedVehicleName+".png",small_text=truncatedVehicleName.upper())
@@ -132,4 +139,4 @@ while True:
         RPC.update(state="Piloting a "+truncatedVehicleName.upper(), details="In Test Drive", start=clockTimer, large_image="logo", large_text="War Thunder", small_image="https://encyclopedia.warthunder.com/i/images/"+strippedVehicleName+".png",small_text=truncatedVehicleName.upper())
     print("Updated Presence")
 
-    time.sleep(3) # Update rich presence every 10 seconds
+    time.sleep(3) # Update rich presence every 3 seconds

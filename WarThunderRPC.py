@@ -107,7 +107,7 @@ while True:
             RPC.update(state="Piloting a "+truncatedVehicleName.upper(), details="Air Ground Strike Match on "+currentMap, start=clockTimer, large_image="logo", large_text="War Thunder", small_image="https://encyclopedia.warthunder.com/i/images/"+strippedVehicleName+".png",small_text=truncatedVehicleName.upper())
         elif mainObjective.startswith("Destroy the highlighted targets"):
             RPC.update(state="Piloting a "+truncatedVehicleName.upper(), details="Air Frontline Match on "+currentMap, start=clockTimer, large_image="logo", large_text="War Thunder", small_image="https://encyclopedia.warthunder.com/i/images/"+strippedVehicleName+".png",small_text=truncatedVehicleName.upper())
-        elif mainObjective.__str__("null"):
+        elif mainObjective:
             RPC.update(state="Piloting a "+truncatedVehicleName.upper(), details="Air Operations Match on "+currentMap, start=clockTimer, large_image="logo", large_text="War Thunder", small_image="https://encyclopedia.warthunder.com/i/images/"+strippedVehicleName+".png",small_text=truncatedVehicleName.upper())
         elif currentMap=="UNKNOWN":
             RPC.update(state="Piloting a "+truncatedVehicleName.upper(), details="Air Match on "+currentMap, start=clockTimer, large_image="logo", large_text="War Thunder", small_image="https://encyclopedia.warthunder.com/i/images/"+strippedVehicleName+".png",small_text=truncatedVehicleName.upper())

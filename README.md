@@ -27,7 +27,6 @@ This application modifies in no way whatsoever any data from the game, it is com
 Unfortunately some modes or vehicles aren't supported due to how the data is structured from the game itself,
 Naval vehicles show no data and will not work, it will show up as "Unknown vehicle".
 
-Your status might show up as "test drive" or that you are flying a "DUMMY_PLANE" during the first few seconds of a match, this is as far as I know unavoidable for now, but it should fix itself once you load in. :)
 
 ## How to Install
 
@@ -42,6 +41,6 @@ I'm working on this myself, as an amateur in Python, please feel free to contrib
 ## Issues
 
  - Air vehicles selected in the hangar does not update RPC, updates when a ground vehicle is selected.
- - RPC is shown as 'Test Drive' at the start of matches, this is due to the game logic's objective flag not being set until the start of the match.
- - Current vehicle is shown as "DUMMY_PLANE" at the start of matches, this is the default camera view name.
+ - ~~RPC is shown as 'Test Drive' at the start of matches, this is due to the game logic's objective flag not being set until the start of the match.~~
+ - ~~Current vehicle is shown as "DUMMY_PLANE" at the start of matches, this is the default camera view name.~~
  - ~~Air "Operation" Mode is broken, and will show up as a 'Test Drive', this is due to the game's logic not outputting correct information.~~ FIXED - Might still take some time to detect, but it should eventually.

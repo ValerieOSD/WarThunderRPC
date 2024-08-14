@@ -31,9 +31,8 @@ Your status might show up as "test drive" or that you are flying a "DUMMY_PLANE"
 
 ## How to Install
 
- 1. Go to "Releases" tab and download the latest version's .ZIP file
- 2. Unzip the file
- 3. Run the application whilst War Thunder is open
+ 1. Go to "Releases" tab and download the latest version's .EXE file
+ 2. Run the application whilst War Thunder is open
 
 
 ## Development

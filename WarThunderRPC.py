@@ -85,6 +85,11 @@ while True:
     elif isinVehicle is False and inMap is False:
         RPC.update(state="In the hangar", details="Browsing vehicles..", start=clockTimer, large_image="logo")  # Set the presence
 
+    elif isinVehicle is True and inMap is True and inMatch is False and vehicleType=="tank" and vehicleName=="DUMMY PLANE" or inMatch is False:
+        RPC.update(state="Loading into a match..", details="Ground Match", start=clockTimer, large_image="logo", large_text="War Thunder")
+    elif isinVehicle is True and inMap is True and inMatch is False and vehicleType=="air" and vehicleName=="DUMMY PLANE" or inMatch is False:
+        RPC.update(state="Loading into a match..", details="Air Match", start=clockTimer, large_image="logo", large_text="War Thunder")
+
     # --- AIR --- #
     elif isinVehicle is True and inMap is True and inMatch is True and vehicleType=="air":
         if mainObjective.startswith("Capture the enemy point"):
@@ -138,5 +143,4 @@ while True:
     elif isinVehicle is True and inMap is True and inMatch is False and vehicleType=="air" or inMatch is False:
         RPC.update(state="Piloting a "+truncatedVehicleName.upper(), details="In Test Drive", start=clockTimer, large_image="logo", large_text="War Thunder", small_image="https://encyclopedia.warthunder.com/i/images/"+strippedVehicleName+".png",small_text=truncatedVehicleName.upper())
     print("Updated Presence")
-
     time.sleep(3) # Update rich presence every 3 seconds
